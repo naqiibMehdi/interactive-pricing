@@ -1,0 +1,135 @@
+:root {
+    font-size: 15px;
+    color: hsl(225, 20%, 60%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: Manrope, sans-serif;
+    background: hsl(230, 100%, 99%);
+}
+
+.page {
+    max-width: 1440px;
+    width: 80%;
+    background: url("./images/bg-pattern.svg") no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-bottom-left-radius: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    background: url("./images/pattern-circles.svg") no-repeat center
+}
+
+.header__title {
+    font-size: 1.6rem;
+    color: hsl(227, 35%, 25%);
+}
+
+.header__subtitle {
+    color: hsl(225, 20%, 60%);
+    font-size: 0.81rem;
+}
+
+.page-range {
+    width: 35%;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-range__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-range__views {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.page-range__price {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.page-range__price .price {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: hsl(227, 35%, 25%);
+    font-weight: 800;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    background: hsl(174, 77%, 80%) url("./images/icon-slider.svg") no-repeat center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat center;
+    cursor: grabbing;
+}
+
+input[type="range"]:active {
+    cursor: grabbing;
+}
+
+input[type="range"] {
+    appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: hsl(224, 65%, 95%);
+    background-image: linear-gradient(to right,
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 50%);
+    outline: none;
+    transition: background-image 1s ease-out;
+}
+
+.page-range__period {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}

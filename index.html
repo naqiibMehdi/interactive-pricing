@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <h1 class="header__title">Simple traffic-based pricing</h1>
+    <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+  </header>
+</div>
+<section class="page-range">
+  <div class="page-range__header">
+    <p class="page-range__views"><span class="views">100K</span> pageviews</p>
+    <p class="page-range__price">
+      <span class="price">$16.00</span>
+      <span class="period">/ month</span>
+    </p>
+  </div>
+  <div class="page-range__range-input">
+    <input type="range" min="0" max="100" step="25">
+  </div>
+  <div class="page-range__period">
+    <p>monthly billing</p>
+    <labe>
+      <input type="checkbox">
+    </labe>
+    <p>yearly Billing <span>25% discount</span></p>
+  </div>
+  <div class="page-range__footer">
+    <p><img src="./images/icon-check.svg" alt="">unlimitedwebsites</p>
+    <p><img src="./images/icon-check.svg" alt="">100% data ownership</p>
+    <p><img src="./images/icon-check.svg" alt="">email reports</p>
+  </div>
+</section>
+</body>
+
+<script src="./app.js"></script>
+</html>
