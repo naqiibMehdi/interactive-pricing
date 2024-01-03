@@ -1,6 +1,9 @@
 :root {
     font-size: 15px;
     color: hsl(225, 20%, 60%);
+    --w-checkbox: 40px;
+    --h-checkbox: calc(var(--w-checkbox) / 2);
+    --br-checkbox: var(--h-checkbox)
 }
 
 *, *::after, *::before {
@@ -46,7 +49,7 @@ body {
 
 .header__subtitle {
     color: hsl(225, 20%, 60%);
-    font-size: 0.81rem;
+    font-size: 0.85rem;
 }
 
 .page-range {
@@ -132,4 +135,31 @@ input[type="checkbox"] {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    position: relative;
+    width: var(--w-checkbox);
+    height: var(--h-checkbox);
+    border-radius: var(--br-checkbox);
+    background-color: hsl(223, 50%, 87%);
+    transition: background-color .3s ease-in;
+}
+
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+    transition: transform .3s ease-in;
+}
+
+input[type="checkbox"]:checked {
+    background-color: hsl(174, 77%, 80%);
+}
+
+input[type="checkbox"]:checked::after {
+    transform: translate(50%, -50%);
 }
