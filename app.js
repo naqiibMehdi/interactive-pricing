@@ -1,8 +1,7 @@
-const inputRange = document.querySelector("input[type='range']")
+const inputRange = document.querySelector("#range-input")
 const checkbox = document.querySelector("[type='checkbox']")
 const priceDisplay = document.querySelector(".price")
 checkbox.checked = false
-inputRange.value = 50
 
 const offers = [
   {
