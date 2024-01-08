@@ -22,7 +22,7 @@ body {
 
 .page {
     max-width: 1440px;
-    width: 80%;
+    width: 100%;
     background: url("./images/bg-pattern.svg") no-repeat;
     background-size: cover;
     height: 50%;
@@ -65,6 +65,7 @@ body {
 }
 
 .page-range__top, .page-range__bottom {
+    width: 100%;
     padding-inline: 60px;
     background: hsl(0, 0%, 100%);
 }
@@ -171,6 +172,10 @@ input[type="range"] {
     transition: background-image 1s ease-out;
 }
 
+.range-input_mobile {
+    display: none;
+}
+
 .page-range__period {
     display: flex;
     align-items: center;
@@ -220,13 +225,17 @@ input[type="checkbox"]:checked::after {
     transform: translate(50%, -50%);
 }
 
-.page-range__discount {
+.page-range__discount, .page-range__discount_mobile {
     color: hsl(15, 100%, 70%);
     background-color: hsl(14, 92%, 95%);
     padding-block: 2px;
     padding-inline: 6px;
     font-size: .7rem;
     border-radius: 15px;
+}
+
+.page-range__discount_mobile {
+    display: none;
 }
 
 .page-range__list-text p {
@@ -252,4 +261,104 @@ input[type="checkbox"]:checked::after {
 .page-range__CTA:hover {
     color: hsl(224, 65%, 95%);
     cursor: pointer;
+}
+
+
+@media (max-width: 375px) {
+    .page {
+        width: 100%;
+        justify-content: initial;
+    }
+
+    .header {
+        margin-top: 15%;
+    }
+
+    .header__title {
+        font-size: 1.4rem;
+    }
+
+    .header__subtitle {
+        width: 165px;
+        font-size: .76rem;
+    }
+
+    .header__title, .header__subtitle {
+        text-align: center;
+    }
+
+    .page-range {
+        width: 320px;
+        top: 55%;
+        align-items: center;
+    }
+
+    .page-range__top {
+        padding-inline: 0;
+    }
+
+    .page-range__views {
+        font-size: .76rem;
+    }
+
+    .page-range__header {
+        flex-direction: column;
+        height: 140px;
+    }
+
+    .range-input_desktop {
+        display: none;
+    }
+
+    .range-input_mobile {
+        display: block;
+        width: 90%;
+    }
+
+    .page-range__period {
+        margin-inline-end: 10px;
+        font-size: .76rem;
+    }
+
+    .page-range__price .price {
+        font-size: 1.4rem;
+    }
+
+    .page-range__price .period {
+        font-size: .76rem;
+    }
+
+    .page-range__discount_mobile {
+        display: block;
+        padding-inline: 8px;
+        padding-block: 3px;
+        font-weight: 800;
+    }
+
+    .page-range__discount {
+        display: none;
+    }
+
+    .page-range__bottom {
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 0;
+        font-size: .76rem;
+    }
+
+    .page-range__list-text p {
+        justify-content: center;
+        font-size: inherit;
+    }
+
+    .page-range__CTA {
+        width: 170px;
+        text-align: center;
+        padding-block: 15px;
+        padding-inline: 15px;
+        font-size: inherit;
+    }
 }
