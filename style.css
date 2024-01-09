@@ -63,13 +63,13 @@ body {
     justify-content: space-between;
 }
 
-.page-range__top, .page-range__bottom {
+.page-range__body, .page-range__bottom {
     width: 100%;
     padding-inline: 60px;
     background: hsl(0, 0%, 100%);
 }
 
-.page-range__top {
+.page-range__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -295,7 +295,7 @@ input[type="checkbox"]:checked::after {
         align-items: center;
     }
 
-    .page-range__top {
+    .page-range__body {
         padding-inline: 0;
     }
 

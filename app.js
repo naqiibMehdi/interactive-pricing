@@ -1,6 +1,7 @@
 const inputRange = document.querySelector("#range-input")
-const checkbox = document.querySelector("[type='checkbox']")
+const checkbox = document.querySelector("#range-checkbox")
 const priceDisplay = document.querySelector(".price")
+const DISCOUNT = 0.75
 checkbox.checked = false
 
 const offers = [
@@ -39,13 +40,13 @@ inputRange.addEventListener("input", e => {
   for (let {pageviews, price, perc} of offers) {
     if (perc === parseInt(value)) {
       views.textContent = pageviews
-      priceDisplay.textContent = `$${checkbox.checked ? (price * 0.75).toString() : price.toString()}.00`
+      priceDisplay.textContent = `$${checkbox.checked ? (price * DISCOUNT).toString() : price.toString()}.00`
     }
   }
 })
 
 checkbox.addEventListener("change", e => {
   const currentPrice = parseInt(priceDisplay.textContent.split(".")[0].substring(1), 10)
-  priceDisplay.textContent = `$${checkbox.checked ? (currentPrice * 0.75).toString() : (currentPrice / 0.75).toString()}.00`
+  priceDisplay.textContent = `$${checkbox.checked ? (currentPrice * DISCOUNT).toString() : (currentPrice / DISCOUNT).toString()}.00`
 
 })
