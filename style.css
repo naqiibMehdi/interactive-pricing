@@ -55,7 +55,7 @@ body {
 .page-range {
     width: 535px;
     position: absolute;
-    top: 42%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -73,7 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 255px;
+    height: 265px;
     padding-block: 35px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -123,7 +123,7 @@ hr {
 
 input[type="range"]::-moz-range-thumb {
     -moz-appearance: none;
-    background: hsl(174, 77%, 80%) url("./images/icon-slider.svg") no-repeat center;
+    background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -134,7 +134,7 @@ input[type="range"]::-moz-range-thumb {
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background: hsl(174, 77%, 80%) url("./images/icon-slider.svg") no-repeat center;
+    background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
