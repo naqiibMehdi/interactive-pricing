@@ -265,22 +265,8 @@ input[type="checkbox"]:checked::after {
     cursor: pointer;
 }
 
+
 @media (max-width: 768px) {
-    body {
-        width: 100%;
-    }
-
-    .page {
-        width: 100%;
-    }
-
-    .page-range {
-        width: 90%;
-    }
-
-}
-
-@media (max-width: 375px) {
     .page {
         width: 100%;
         justify-content: initial;
