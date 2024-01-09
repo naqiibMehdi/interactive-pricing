@@ -14,7 +14,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background: hsl(230, 100%, 99%);
@@ -265,6 +265,15 @@ input[type="checkbox"]:checked::after {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+
+    .page {
+        width: 100%;
+    }
+}
 
 @media (max-width: 375px) {
     .page {
